@@ -12,9 +12,9 @@ import firebirdsql
 ### for some reasen alchemy is not working to use insert block statement should use firebirdql instead 
 ###
 #
-def QsConn(qs,host):
+def QsConn(qs):
     ti = time.time()
-    #host='206.81.11.212///var/lib/firebird/3.0/data/SensoresRomaga.fdb'
+    host='206.81.11.212///var/lib/firebird/3.0/data/SensoresRomaga.fdb'
     con = firebirdsql.connect(dsn=host, user='sysdba', password='300184rm2')  
     try:
         cur = con.cursor() 
