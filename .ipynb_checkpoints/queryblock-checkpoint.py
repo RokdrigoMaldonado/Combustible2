@@ -7,7 +7,6 @@ from sqlalchemy import inspect,func
 from sqlalchemy import create_engine
 import time
 import firebirdsql
-
 #this is working good
 ### for some reasen alchemy is not working to use insert block statement should use firebirdql instead 
 ###
@@ -23,7 +22,7 @@ def QsConn(qs):
         cur.execute(qs)
         con.commit()
         con.close()
-        #print('Commint sueccess 5 rows insert at {}'.format(time.time()-ti))
+        print('Commint sueccess 18 rows insert at {}'.format(time.time()-ti))
     except Exception as e:
         print("sommenthing fail")
         con.rollback()
